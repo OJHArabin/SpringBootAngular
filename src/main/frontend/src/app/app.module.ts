@@ -1,10 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { TasksComponent } from './tasks/tasks.component';
-import { TaskAddComponent } from './tasks/task-add/task-add.component';
-import { TaskListComponent } from './tasks/task-list/task-list.component';
+import {AppComponent} from './app.component';
+import {TasksComponent} from './tasks/tasks.component';
+import {TaskAddComponent} from './tasks/task-add/task-add.component';
+import {TaskListComponent} from './tasks/task-list/task-list.component';
+import {TaskService} from './tasks/task.service';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { TaskListComponent } from './tasks/task-list/task-list.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
